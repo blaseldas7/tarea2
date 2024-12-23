@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Información</title>
+</head>
+<body style="background-color: AntiqueWhite; font-family: Arial;">
+
+    <h1 style="font-size: 25px; color: brown;">Formulario de Información</h1>
+
+    <form action="formulario.php" method="POST">
+        <fieldset style="border: 1px solid #ccc; margin-bottom: 20px;">
+            <legend style="font-size: 18px; font-weight: bold; padding: 0 10px;">Sus Datos</legend>
+            
+            <div style="margin-bottom: 10px;">
+                <label for="nombre" style="font-size: 18px;">Nombre y apellidos:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe aquí..." maxlength="50" required>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="contrasena" style="font-size: 18px;">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" maxlength="8" required>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="usuario" style="font-size: 18px;">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" value="anónimo" disabled>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label style="font-size: 18px;">Nivel:</label><br>
+                <input type="radio" id="profesional" name="nivel" value="Profesional">
+                <label for="profesional">Profesional</label><br>
+                <input type="radio" id="avanzado" name="nivel" value="Avanzado" checked>
+                <label for="avanzado">Avanzado</label><br>
+                <input type="radio" id="principiante" name="nivel" value="Principiante">
+                <label for="principiante">Principiante</label>
+            </div>
+        </fieldset>
+
+        <p> Nacionalidad:
+        <select id="nacionalidad" name="nacionalidad" required>
+            <option value="España" selected>España</option>
+            <option value="México">México</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Chile">Chile</option>
+        </select>
+    </p>
+    
+     <p>    
+        <label for="descripcion" style="font-size: 18px;">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="5" placeholder="Escribe aquí..."></textarea>
+    </p> 
+
+    <p>
+    <input type="checkbox" id="informacion" name="informacion" checked>
+        <label for="informacion" style="font-size: 18px;">Deseo recibir información sobre novedades y ofertas</label><br>
+        <input type="checkbox" id="condiciones" name="condiciones" required>
+        <label for="condiciones" style="font-size: 18px;">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+    </p>
+
+    <p></p>
+        <label for="foto" style="font-size: 18px;">Adjuntar foto:</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+    </p>
+
+    <p>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar datos">
+        </div>
+    </p>
+
+    <p>
+        <button type="button" onclick="window.history.back();">Volver atrás</button>
+    </p>
+    </form>
+
+</body>
+</html>
